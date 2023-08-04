@@ -8,12 +8,20 @@ export default function FoodFilter() {
     const [searchQuery, setSearchQuery] = useState('');
   
     useEffect(() => {
+<<<<<<< HEAD
       fetch('https://raw.githubusercontent.com/brian-njoro/project-api/main/foods.json')
+=======
+      fetch("http://localhost:3001/food")
+>>>>>>> 5ec617b (initial commit)
         .then(response => response.json())
         .then(data => setFoods(data))
         .catch(error => console.error('Error fetching food data:', error));
   
+<<<<<<< HEAD
       fetch('https://raw.githubusercontent.com/brian-njoro/project-api/main/restaurants.json')
+=======
+      fetch("http://localhost:3001/restaurants")
+>>>>>>> 5ec617b (initial commit)
         .then(response => response.json())
         .then(data => setRestaurants(data))
         .catch(error => console.error('Error fetching restaurant data:', error));

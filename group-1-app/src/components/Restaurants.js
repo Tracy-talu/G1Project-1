@@ -4,13 +4,21 @@ function Restaurants() {
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
+<<<<<<< HEAD
     fetch('https://raw.githubusercontent.com/brian-njoro/project-api/main/restaurants.json')
+=======
+    fetch("http://localhost:3001/restaurants")
+>>>>>>> 5ec617b (initial commit)
       .then(response => response.json())
       .then(data => setRestaurants(data))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
   return (
+    <>
+    <div>
+      <h1> Available Restaurants</h1>
+    </div>
     <div className="restaurant-list">
       {restaurants.map(restaurant => (
         <div key={restaurant.id} className="restaurant-card">
@@ -20,6 +28,7 @@ function Restaurants() {
         </div>
       ))}
     </div>
+    </>
   );
 }
 

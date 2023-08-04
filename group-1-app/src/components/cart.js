@@ -5,7 +5,11 @@ function Cart() {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
+<<<<<<< HEAD
     fetch("https://raw.githubusercontent.com/brian-njoro/project-api/main/foods.json")
+=======
+    fetch("http://localhost:3001/food")
+>>>>>>> 5ec617b (initial commit)
       .then((response) => response.json())
       .then((data) => setFood(data));
   }, []);
@@ -21,6 +25,10 @@ function Cart() {
   }
 
   return (
+    <>
+    <div>
+      <h1>Food Available</h1>
+    </div>
     <div className="Container">
       {food.map((food) => {
         return (
@@ -72,6 +80,7 @@ function Cart() {
         </table>
       )}
     </div>
+    </>
   );
 }
 

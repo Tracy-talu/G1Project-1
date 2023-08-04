@@ -24,7 +24,11 @@ export default function OrderForm() {
   };
 
   return (
-    <div className='orderFormContainer'>
+    <>
+    <div>
+      <h1>Place Your Order Now!!</h1>
+    </div>
+    <div className='orderFormContainer' style={{marginTop:"150px"}}>
       <form className='orderForm' onSubmit={handleSubmit}>
         {/* Food type input */}
         <label className='formLabel'>
@@ -79,5 +83,6 @@ export default function OrderForm() {
         <button type="submit" className='submitButton'>Submit your order here...</button>
       </form>
     </div>
+    </>
   );
 }
